@@ -1,0 +1,161 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  
+  background-color: var(--color-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  border: 1px solid var(--color-border);
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  width: calc(100% - 60px);
+  margin: 24px auto;
+  max-width: 1200px;
+  
+  transition: all 0.3s ease;
+}
+
+.navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.02);
+}
+
+.navbar__logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  
+  box-shadow: 0 0 0 2px var(--color-border-btn), 0 0 15px rgba(217, 100, 53, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__logo:hover .navbar__logo-wrapper {
+  box-shadow: 0 0 0 2px var(--color-border-btn), 0 0 25px rgba(217, 100, 53, 0.8);
+  transform: rotate(-5deg);
+}
+
+.navbar__logo-img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navbar__logo-text {
+  font-family: 'Ghiya Strokes Reg', sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  transition: color 0.3s ease;
+}
+
+.navbar__logo:hover .navbar__logo-text {
+  color: var(--color-border-btn);
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar__menu-link {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar__menu-link:not(.active):hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__menu-link.active {
+  color: #1A1A1A;
+  background-color: var(--color-border-btn);
+  font-weight: 700;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.2),
+    0 0 20px rgba(217, 100, 53, 0.8),
+    0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.navbar__buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.navbar__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar__button:hover {
+    color: #221D1F;
+    background-color: var(--color-border-btn);
+    border-color: var(--color-border-btn);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(217, 100, 53, 0.3);
+  }
+}
+
+.navbar__button:active {
+  transform: translateY(0);
+}
+
+.navbar__icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.navbar__logo-bg {
+  display: none;
+}

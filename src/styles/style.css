@@ -1,10 +1,10 @@
 :root {
   --color-bg: #221D1F;
-  --color-surface: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.3);
   --color-text: #3D3D3D;
   --color-text-muted: #666666;
   --color-border: #8A8C8F;
-  --color-border-btn: #C4E326;
+  --color-border-btn: #D96435;
   --color-fill-btn: rgba(196, 227, 38, 0.06);
   --color-border-btn-hover: rgb(230, 255, 119);
   --color-fill-btn-hover: rgba(196, 255, 119, 0.1);
